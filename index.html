@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>FOSS4G-Perú</title>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/monokai-sublime.min.css">
+  <link rel="stylesheet" href="css/app.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+
+<body ng-app="DemoApp" ng-cloak ng-controller="MainCtrl" layout="column">
+  <div layout="column" ng-cloak="" class="sidenavdemoBasicUsage" layout-fill>
+    <section layout="row" flex="">
+      <md-sidenav class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')" md-whiteframe="4">
+        <div class="sidenav-header">
+          <img src="images/amigocloud-logo-white.png" width="200px">
+        </div>
+        <md-content class="menu">
+          <md-button ng-click="loadPage(1)" class="md-primary">
+            Mapa Básico
+          </md-button>
+          <md-button ng-click="loadPage(2)" class="md-primary">
+            Mútiples Capas
+          </md-button>
+          <md-button ng-click="loadPage(3)" class="md-primary">
+            Marcadores y Polígonos
+          </md-button>
+          <md-button ng-click="loadPage(4)" class="md-primary">
+            GeoJson
+          </md-button>
+          <md-button ng-click="loadPage(5)" class="md-primary">
+            GeoJson Styling
+          </md-button>
+          <md-button ng-click="loadPage(6)" class="md-primary">
+            Multiples GeoJson
+          </md-button>
+          <md-button ng-click="loadPage(7)" class="md-primary">
+            Plugins
+          </md-button>
+        </md-content>
+      </md-sidenav>
+      <div layout="column" flex>
+        <md-toolbar class="md-hue-2">
+          <div class="md-toolbar-tools">
+            <md-button class="md-icon-button" aria-label="Settings" hide-gt-sm ng-click="toggleMenu()">
+              <i class="fa fa-bars amigo-icons" aria-hidden="true"></i>
+            </md-button>
+            <h2>
+          <span>Mapas</span>
+        </h2>
+            <span flex></span>
+            <md-button class="md-icon-button" aria-label="Favorite" ng-click="viewCode()">
+              <i class="fa fa-code amigo-icons" aria-hidden="true"></i>
+            </md-button>
+          </div>
+        </md-toolbar>
+        <md-content class="content-container">
+          <div hljs hljs-source="codeContent" class="code-preview" ng-show="displayCode" hljs-language="javascript">
+          </div>
+          <div layout="column" layout-fill="" layout-align="top left">
+            <iframe frameborder="0" class="map-container" ng-src="{{currentPage}}"></iframe>
+            <img src="images/amigocloud-logo.png" height="30px" class="amigo-logo">
+          </div>
+        </md-content>
+      </div>
+    </section>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-messages.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+  <script src="https://pc035860.github.io/angular-highlightjs/angular-highlightjs.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

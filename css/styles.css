@@ -1,0 +1,25 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.buttons {
+  position: absolute;
+  z-index: 10000;
+  padding: 10px;
+  right: 0;
+}
+
+#map {
+  height: 100%;
+}
+
+.form {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 10000;
+    background: #fff;
+}
